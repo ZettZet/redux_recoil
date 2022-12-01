@@ -19,9 +19,7 @@ export const Element: FC<{ id: number }> = ({ id }) => {
 		<Draggable
 			onDrag={(x, y) => {
 				dispatch(updateElement({ ...state, x, y }))
-				if (id === state.id) {
-					dispatch(selectElement(id))
-				}
+				dispatch(selectElement(id))
 			}}
 		>
 			<Suspense fallback="Loading">
