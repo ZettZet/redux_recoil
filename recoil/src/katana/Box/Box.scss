@@ -1,0 +1,9 @@
+@import "../katana.scss";
+
+.katana-Box {
+  background-color: $--katana-white;
+
+  &.katana-Box_black {
+    background-color: $--katana-black;
+  }
+}

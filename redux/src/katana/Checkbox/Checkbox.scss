@@ -1,0 +1,82 @@
+@import '../katana.scss';
+
+.katana-Checkbox {
+	cursor: pointer;
+	border: 2px solid $--katana-black;
+	background: $--katana-black;
+	color: $--katana-white;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: -10%;
+		width: 120%;
+		height: 100%;
+		content: '';
+		background: $--katana-white;
+
+		transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+	}
+
+	& > span {
+		position: relative;
+		mix-blend-mode: difference;
+	}
+
+	&:hover::before {
+		transform: translate3d(100%, 0, 0);
+	}
+
+	&.katana-Checkbox_checked::before {
+		transform: translate3d(100%, 0, 0);
+	}
+
+	&.katana-Checkbox_black {
+		border: 2px solid $--katana-white;
+		background: $--katana-white;
+
+		&::before {
+			background: $--katana-black;
+		}
+
+		&.katana-Checkbox_positive,
+		&.katana-Checkbox_negative {
+			& > span {
+				color: $--katana-white;
+			}
+		}
+	}
+
+	&.katana-Checkbox_negative,
+	&.katana-Checkbox_positive {
+		&:hover {
+			& > span {
+				mix-blend-mode: normal;
+			}
+		}
+	}
+
+	&.katana-Checkbox_negative {
+		border: 3px solid $--katana-accent-negative;
+
+		&:hover {
+			background: $--katana-accent-negative;
+		}
+	}
+
+	&.katana-Checkbox_positive {
+		border: 3px solid $--katana-accent-positive;
+
+		&:hover {
+			background: $--katana-accent-positive;
+		}
+	}
+
+	& .katana-Checkbox__Input {
+		visibility: hidden;
+		width: 0;
+		height: 0;
+	}
+}

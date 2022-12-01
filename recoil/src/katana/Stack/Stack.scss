@@ -1,0 +1,46 @@
+@import '../katana.scss';
+
+.katana-Stack {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $--katana-white;
+	height: 100%;
+	width: 100%;
+
+	&.katana-Stack_direction_vertical {
+		flex-direction: column;
+	}
+
+	&.katana-Stack_direction_horizontal {
+		flex-direction: row;
+	}
+
+	&.katana-Stack_black {
+		background: $--katana-black;
+	}
+
+	&.katana-Stack_mainAxis_start {
+		justify-content: flex-start;
+	}
+
+	&.katana-Stack_mainAxis_center {
+		justify-content: center;
+	}
+
+	&.katana-Stack_mainAxis_end {
+		align-items: flex-end;
+	}
+
+	&.katana-Stack_crossAxis_start {
+		align-items: start;
+	}
+
+	&.katana-Stack_crossAxis_center {
+		align-items: center;
+	}
+
+	&.katana-Stack_crossAxis_end {
+		justify-content: end;
+	}
+}

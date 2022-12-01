@@ -1,0 +1,17 @@
+@import '../katana.scss';
+
+.katana-Image {
+	border: 2px solid $--katana-black;
+	aspect-ratio: 1;
+
+	&.katana-Image_black {
+		border-color: $--katana-white;
+	}
+
+	&.katana-Image_shape_circle {
+		border-radius: 50%;
+	}
+
+	&.katana-Image_shape_square {
+	}
+}

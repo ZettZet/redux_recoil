@@ -1,0 +1,9 @@
+@import '../katana.scss';
+
+.katana-Typography {
+	color: $--katana-black;
+
+	&.katana-Typography_black {
+		color: $--katana-white;
+	}
+}

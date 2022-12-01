@@ -1,0 +1,9 @@
+.DraggableStage {
+	position: relative;
+}
+
+.DraggableStage-Element {
+	position: absolute;
+	min-width: 500px;
+	min-height: 500px;
+}

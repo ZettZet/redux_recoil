@@ -1,0 +1,12 @@
+.TopPanel {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+
+.TopPanel-Button {
+	padding: 5px 15px;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
