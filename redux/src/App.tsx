@@ -4,10 +4,9 @@ import { useAppSelector } from './common/hooks'
 import { getElements } from './store/reducers/elementsSlice'
 import { Element, Info, TopPanel, Viewer } from './components'
 
-import { ElementState } from './types'
-
-const equalityFn = (a: ElementState[], b: ElementState[]) => {
-	return b.every((el, index) => el.id === (a[index] && a[index].id));
+const equalityFn = (state: unknown[], stateNew: unknown[]) => {
+	// простая проверка
+	return state.length === stateNew.length;
 }
 
 const App: FC = () => {
